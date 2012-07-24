@@ -6,8 +6,10 @@
 
 ## How to Run
 
+Make sure you have all the dependencies, and then:
+
 ```
-> cabal configure
+> cabal configure --enable-tests
 > cabal build
 > cabal test
 ```
