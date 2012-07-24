@@ -1,0 +1,9 @@
+name:                haskellExercises
+version:             0.1.0.0
+author:              Hugo Sereno Ferreira
+build-type:          Simple
+cabal-version:       >= 1.8
+
+executable 99-haskell-exercises
+  main-is:           exs.hs
+  build-depends:     base > 4.5
