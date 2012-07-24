@@ -9,5 +9,5 @@
 ```
 > cabal configure
 > cabal build
-> dist/build/99-haskell-exercises/99-haskell-exercises
+> cabal test
 ```
