@@ -1,9 +1,27 @@
-name:                haskellExercises
-version:             0.1.0.0
-author:              Hugo Sereno Ferreira
-build-type:          Simple
-cabal-version:       >= 1.8
+name:                 haskellExercises
+version:              0.1
+author:               Hugo Sereno Ferreira
+build-type:           Simple
+cabal-version:        >= 1.10
 
 executable 99-haskell-exercises
-  main-is:           exs.hs
-  build-depends:     base > 4.5
+    main-is:          exs.hs
+    build-depends:    base >= 4 && < 5,
+                      QuickCheck >= 2.4
+    hs-source-dirs:   src
+    ghc-options:      -Wall
+    default-language: Haskell2010
+
+test-suite Main
+    type:             exitcode-stdio-1.0
+    x-uses-tf:        true
+    build-depends:    base >= 4 && < 5,
+                      HUnit >= 1.2 && < 2,
+                      QuickCheck >= 2.4,
+                      test-framework >= 0.4.1,
+                      test-framework-quickcheck2,
+                      test-framework-hunit
+    ghc-options:      -Wall -rtsopts
+    hs-source-dirs:   src, tests
+    main-is:          Main.hs
+    default-language: Haskell2010
